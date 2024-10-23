@@ -1,8 +1,6 @@
 # BibliothequeExamen
 Application simulant une bibliothèque.
 
-forthebadge
-
 # Gestion de Bibliothèque
 
 Ce projet est une application Java permettant de gérer une bibliothèque de livres. Il inclut des fonctionnalités pour ajouter des lecteurs, louer des livres, et rechercher des ouvrages par ISBN. L'objectif principal de cette application est de fournir une interface simple pour la gestion des lecteurs et des livres dans une bibliothèque.
@@ -27,7 +25,7 @@ Ce projet est une application Java permettant de gérer une bibliothèque de liv
 
 1. Clonez ce dépôt :
    ```bash
-   git clone [https://github.com/votre-compte/votre-projet.git](https://github.com/eloiseLBC/BibliothequeExamen.git)
+   git clone https://github.com/eloiseLBC/BibliothequeExamen.git
 
 2. Packagez grâce à Maven:
    ```bash
@@ -47,6 +45,42 @@ Consultez la liste des livres disponibles et des lecteurs inscrits.
 
 ## Exemples
 Voici un exemple d'ajout d'un livre à la bibliothèque :
-```java
-  Livre livre = new Livre("1234567890", "Le Petit Prince", "Un classique de la littérature", "Antoine de Saint-Exupéry", 15.99);
-  bibliotheque.addLivre(livre);
+````java
+    Livre livre = new Livre("1234567890", "Le Petit Prince", "Un classique de la littérature", "Antoine de Saint-Exupéry", 15.99);
+    bibliotheque.addLivre(livre);
+````
+    
+
+## Structure des données
+Les données assignées ont été réfléchies afin de spécifier l'ISBN comme identifiant. Voici un exemple de données possibles : 
+```json
+[
+  {
+    "isbn": "978-3-16-148410-0",
+    "title": "The Data Science Handbook",
+    "description": "A comprehensive guide to data science and machine learning.",
+    "author": "John Smith",
+    "price": 45.99,
+    "quantity": 2
+  },
+  {
+    "isbn": "978-1-4028-9462-6",
+    "title": "Big Data for Beginners",
+    "description": "An introductory book on big data concepts and technologies.",
+    "author": "Jane Doe",
+    "price": 39.95,
+    "quantity": 1
+  }]
+```
+
+## Architecture
+![img.png](img.png)
+En entrée, l'application récupère les données d'un fichier .json recensant toutes les informations sur les livres. La bibliothèque enregistre tous les livres et un menu contextuel permet à l'utilisateur de naviguer en son sein.
+![img_1.png](img_1.png)
+L'utilisateur peut se connecter ou se créer un compte afin de louer et/ou rendre des livres. Cepedant, même déconnecté, celui-ci peut voir les livres disponibles, les livres enregistrés par la bibliothèque et les détails d'un livre en particulier.
+Une fois après avoir louer des livres (ou non), il est possible d'exporter en .json les données de tous les livres disponibles.
+
+L'utilisation préconisée pour exporter les données est de donner un nom sans extension ``livres_disponibles`` et ensuite de spécifier le path du nouveau fichier.
+
+## Contributeurs
+* Eloïse LE BLANC
