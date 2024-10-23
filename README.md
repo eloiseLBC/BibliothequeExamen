@@ -38,10 +38,18 @@ Ce projet est une application Java permettant de gérer une bibliothèque de liv
 * Main.java : Classe principale permettant d'exécuter l'application et d'interagir avec la bibliothèque.
 
 ## Utilisation
+Se connecter à l'application à l'aide d'un id utilisateur.
 Ajoutez des lecteurs à la bibliothèque.
 Ajoutez des livres disponibles à partir d'un fichier JSON ou manuellement.
 Louez des livres en entrant l'ISBN correspondant.
 Consultez la liste des livres disponibles et des lecteurs inscrits.
+
+Certains utilisateurs sont déjà enregistrés, mais si souhaité il est possible de créer un nouvel utilisateur.
+````java
+    Lecteur lecteur1 = new Lecteur(1, "Eloïse");
+    Lecteur lecteur2 = new Lecteur(2, "Lou");
+    Lecteur lecteur3 = new Lecteur(3, "Saaziley");
+````
 
 ## Exemples
 Voici un exemple d'ajout d'un livre à la bibliothèque :
