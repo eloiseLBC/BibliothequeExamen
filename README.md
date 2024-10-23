@@ -48,16 +48,5 @@ Consultez la liste des livres disponibles et des lecteurs inscrits.
 ## Exemples
 Voici un exemple d'ajout d'un livre à la bibliothèque :
 ```java
-   Copy code
   Livre livre = new Livre("1234567890", "Le Petit Prince", "Un classique de la littérature", "Antoine de Saint-Exupéry", 15.99);
   bibliotheque.addLivre(livre);
-
-Versions
-ExamJava-1.0-SNAPSHOT-jar-with-dependencies.jar
-
-Auteurs
-Eloïse LE BLANC @eloiseLBC
-
-
-License
-Ce projet est sous licence exemple: WTFTPL - voir le fichier LICENSE.md pour plus d'informations
