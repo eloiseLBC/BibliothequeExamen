@@ -38,10 +38,18 @@ Ce projet est une application Java permettant de gérer une bibliothèque de liv
 * Main.java : Classe principale permettant d'exécuter l'application et d'interagir avec la bibliothèque.
 
 ## Utilisation
-Ajoutez des lecteurs à la bibliothèque.
-Ajoutez des livres disponibles à partir d'un fichier JSON ou manuellement.
-Louez des livres en entrant l'ISBN correspondant.
-Consultez la liste des livres disponibles et des lecteurs inscrits.
+* Se connecter à l'application à l'aide d'un id utilisateur.
+* Ajoutez des lecteurs à la bibliothèque.
+* Ajoutez des livres disponibles à partir d'un fichier JSON ou manuellement.
+* Louez des livres en entrant l'ISBN correspondant.
+* Consultez la liste des livres disponibles et des lecteurs inscrits.
+
+Certains utilisateurs sont déjà enregistrés, mais si souhaité il est possible de créer un nouvel utilisateur.
+````java
+    Lecteur lecteur1 = new Lecteur(1, "Eloïse");
+    Lecteur lecteur2 = new Lecteur(2, "Lou");
+    Lecteur lecteur3 = new Lecteur(3, "Saaziley");
+````
 
 ## Exemples
 Voici un exemple d'ajout d'un livre à la bibliothèque :
@@ -75,7 +83,7 @@ Les données assignées ont été réfléchies afin de spécifier l'ISBN comme i
 
 ## Architecture
 <div align="center">
-  <img src="img.png" alt="Description de l'image" width="700"/>
+  <img src="img.png" alt="Description de l'image" width="600"/>
 </div>
 <div>
   <p>En entrée, l'application récupère les données d'un fichier .json recensant toutes les informations sur les livres. La bibliothèque enregistre tous les livres et un menu contextuel permet à l'utilisateur de naviguer en son sein.
@@ -83,7 +91,7 @@ Les données assignées ont été réfléchies afin de spécifier l'ISBN comme i
 </div>
 
 <div align="center">
-  <img src="img_1.png" alt="Description de l'image" width="700"/>
+  <img src="img_1.png" alt="Description de l'image" width="600"/>
 </div>
 <div>
   <p>L'utilisateur peut se connecter ou se créer un compte afin de louer et/ou rendre des livres. Cepedant, même déconnecté, celui-ci peut voir les livres disponibles, les livres enregistrés par la bibliothèque et les détails d'un livre en particulier.
