@@ -32,10 +32,10 @@ Ce projet est une application Java permettant de gérer une bibliothèque de liv
    maven clean package
   
 ## Structure du projet
-Livre.java : Modélisation d'un livre avec ses propriétés (ISBN, titre, auteur, description, prix).
-Lecteur.java : Modélisation d'un lecteur, avec ses informations et la liste des livres qu'il a loués.
-Bibliotheque.java : Gère les lecteurs et les livres, et inclut les fonctionnalités pour louer des livres, afficher les livres disponibles, et gérer les interactions avec les lecteurs.
-Main.java : Classe principale permettant d'exécuter l'application et d'interagir avec la bibliothèque.
+* Livre.java : Modélisation d'un livre avec ses propriétés (ISBN, titre, auteur, description, prix).
+* Lecteur.java : Modélisation d'un lecteur, avec ses informations et la liste des livres qu'il a loués.
+* Bibliotheque.java : Gère les lecteurs et les livres, et inclut les fonctionnalités pour louer des livres, afficher les livres disponibles, et gérer les interactions avec les lecteurs.
+* Main.java : Classe principale permettant d'exécuter l'application et d'interagir avec la bibliothèque.
 
 ## Utilisation
 Ajoutez des lecteurs à la bibliothèque.
@@ -74,13 +74,29 @@ Les données assignées ont été réfléchies afin de spécifier l'ISBN comme i
 ```
 
 ## Architecture
-![img.png](img.png)
-En entrée, l'application récupère les données d'un fichier .json recensant toutes les informations sur les livres. La bibliothèque enregistre tous les livres et un menu contextuel permet à l'utilisateur de naviguer en son sein.
-![img_1.png](img_1.png)
-L'utilisateur peut se connecter ou se créer un compte afin de louer et/ou rendre des livres. Cepedant, même déconnecté, celui-ci peut voir les livres disponibles, les livres enregistrés par la bibliothèque et les détails d'un livre en particulier.
+<div align="center">
+  <img src="img.png" alt="Description de l'image" width="300"/>
+</div>
+<div>
+  <p>En entrée, l'application récupère les données d'un fichier .json recensant toutes les informations sur les livres. La bibliothèque enregistre tous les livres et un menu contextuel permet à l'utilisateur de naviguer en son sein.
+</p>
+</div>
+
+<div align="center">
+  <img src="img_1.png" alt="Description de l'image" width="300"/>
+</div>
+<div>
+  <p>L'utilisateur peut se connecter ou se créer un compte afin de louer et/ou rendre des livres. Cepedant, même déconnecté, celui-ci peut voir les livres disponibles, les livres enregistrés par la bibliothèque et les détails d'un livre en particulier.
 Une fois après avoir louer des livres (ou non), il est possible d'exporter en .json les données de tous les livres disponibles.
 
 L'utilisation préconisée pour exporter les données est de donner un nom sans extension ``livres_disponibles`` et ensuite de spécifier le path du nouveau fichier.
+
+</p>
+</div>
+
+
+## Executable
+Le jar est exécutable sous tous les environnements, pour être certain que le jar soit correct, il est crucial de prendre le ``ExamJava-1.0-SNAPSHOT-jar-with-dependencies.jar``.
 
 ## Contributeurs
 * Eloïse LE BLANC
