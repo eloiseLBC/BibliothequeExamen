@@ -143,4 +143,35 @@ public class Bibliotheque {
             System.err.println("Erreur lors de l'export : " + e.getMessage());
         }
     }
+
+    public void smartBookResearch(String smartResearch) {
+        List<Livre> lstResearch = new ArrayList<>();
+        for (Livre livre: livres){
+            String sPrice = String.valueOf(livre.price);
+            String sQuantity = String.valueOf(livre.quantity);
+            if (livre.isbn.contains(smartResearch)){
+                lstResearch.add(livre);
+            } else if (livre.description.contains(smartResearch)) {
+                lstResearch.add(livre);
+            } else if (livre.author.contains(smartResearch)) {
+                lstResearch.add(livre);
+            } else if (livre.title.contains(smartResearch)) {
+                lstResearch.add(livre);
+            } else if (sPrice.contains(smartResearch)) {
+                lstResearch.add(livre);
+            } else if (sQuantity.contains(smartResearch)) {
+                lstResearch.add(livre);
+            }
+        }
+
+        if (!lstResearch.isEmpty()) {
+            System.out.println("Voici les livres qui se rapprochent le plus de votre recherche : ");
+            for (Livre livre: lstResearch){
+                System.out.println(livre);
+            }
+        } else {
+            System.out.println("Désolé, aucun livre ne correspond à votre sélection.");
+        }
+
+    }
 }

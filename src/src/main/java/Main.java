@@ -31,12 +31,13 @@ public class Main {
                 System.out.println("1 - Se connecter");
                 System.out.println("2 - Voir tous les livres");
                 System.out.println("3 - Voir les livres disponibles");
-                System.out.println("4 - Voir les détails d'un livre");
-                System.out.println("5 - Louer un livre");
-                System.out.println("6 - Rendre un livre");
-                System.out.println("7 - Exporter le catalogue des livres disponibles");
-                System.out.println("8 - Voir profil");
-                System.out.println("9 - Créer  un compte et se connecter");
+                System.out.println("4 - Voir les détails d'un livre (ISBN)");
+                System.out.println("5 - Voir les détails d'un livre (Recherche intelligente)");
+                System.out.println("6 - Louer un livre");
+                System.out.println("7 - Rendre un livre");
+                System.out.println("8 - Exporter le catalogue des livres disponibles");
+                System.out.println("9 - Voir profil");
+                System.out.println("10 - Créer  un compte et se connecter");
                 System.out.println("0 - Déconnexion");
                 Scanner sc = new Scanner(System.in);
                 System.out.println("Que désirez-vous faire ? ");
@@ -66,18 +67,24 @@ public class Main {
                         bibliotheque.seeDetails(isbn);
                         break;
                     case 5:
+                        Scanner scSmartResearch = new Scanner(System.in);
+                        System.out.println("Faîtes votre recherche : ");
+                        String smartResearch = scSmartResearch.nextLine();
+                        bibliotheque.smartBookResearch(smartResearch);
+                        break;
+                    case 6:
                         Scanner scISBNRent = new Scanner(System.in);
                         System.out.println("Quel livre voulez-vous louer (ISBN) ?");
                         String isbnRent = scISBNRent.nextLine();
                         bibliotheque.rentBook(isbnRent);
                         break;
-                    case 6:
+                    case 7:
                         Scanner scReturnBook = new Scanner(System.in);
                         System.out.println("Quel livre souhaitez-vous retourner (ISBN) ?");
                         String isbnReturn = scReturnBook.nextLine();
                         bibliotheque.returnBook(isbnReturn);
                         break;
-                    case 7:
+                    case 8:
                         Scanner scFileName = new Scanner(System.in);
                         Scanner scFilePath = new Scanner(System.in);
                         System.out.println("Sous quel nom de fichier souhaitez-vous exporter les données ? ");
@@ -85,7 +92,7 @@ public class Main {
                         System.out.println("Où souhaitez-vous exporter les données (path) ? ");
                         String filePath = scFilePath.nextLine();
                         bibliotheque.exportToJson(fileName, filePath);
-                    case 8:
+                    case 9:
                         if (bibliotheque.lecteurCourant == null){
                             System.out.println("Aucun utilisateur connecté");
                         } else {
@@ -93,7 +100,7 @@ public class Main {
                                     + bibliotheque.lecteurCourant.getId() + ", liste des livres loués : " + bibliotheque.lecteurCourant.livres);
                         }
                         break;
-                    case 9:
+                    case 10:
                         System.out.println("Création de compte lecteur");
                         Scanner scRegister = new Scanner(System.in);
                         System.out.println("Quel est votre prénom ? ");
