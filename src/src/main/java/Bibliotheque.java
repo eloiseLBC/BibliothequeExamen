@@ -111,6 +111,10 @@ public class Bibliotheque {
     }
 
     public void returnBook(String isbn){
+        if (lecteurCourant == null){
+            System.out.println("Aucun utilisateur connecté, impossible de louer un livre");
+            return;
+        }
         if (lecteurCourant.livres.isEmpty()){
             System.out.println("Vous n'avez aucun livre à rendre.");
         }
