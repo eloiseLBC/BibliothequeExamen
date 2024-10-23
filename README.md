@@ -75,7 +75,7 @@ Les données assignées ont été réfléchies afin de spécifier l'ISBN comme i
 
 ## Architecture
 <div align="center">
-  <img src="img.png" alt="Description de l'image" width="300"/>
+  <img src="img.png" alt="Description de l'image" width="700"/>
 </div>
 <div>
   <p>En entrée, l'application récupère les données d'un fichier .json recensant toutes les informations sur les livres. La bibliothèque enregistre tous les livres et un menu contextuel permet à l'utilisateur de naviguer en son sein.
@@ -83,7 +83,7 @@ Les données assignées ont été réfléchies afin de spécifier l'ISBN comme i
 </div>
 
 <div align="center">
-  <img src="img_1.png" alt="Description de l'image" width="300"/>
+  <img src="img_1.png" alt="Description de l'image" width="700"/>
 </div>
 <div>
   <p>L'utilisateur peut se connecter ou se créer un compte afin de louer et/ou rendre des livres. Cepedant, même déconnecté, celui-ci peut voir les livres disponibles, les livres enregistrés par la bibliothèque et les détails d'un livre en particulier.
