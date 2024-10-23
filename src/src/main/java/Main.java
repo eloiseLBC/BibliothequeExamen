@@ -112,7 +112,7 @@ public class Main {
                     default:
                         System.out.println("L'option n'est pas reconnue.");
                 }
-            } while(choice != "0");
+            } while(!choice.equals("0"));
             System.out.println("Au revoir !");
         } catch (IOException e){
             System.out.println("Erreur : " + e.getMessage());
