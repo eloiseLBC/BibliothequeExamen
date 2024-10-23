@@ -150,16 +150,17 @@ public class Bibliotheque {
 
     public void smartBookResearch(String smartResearch) {
         List<Livre> lstResearch = new ArrayList<>();
+        smartResearch = smartResearch.toLowerCase();
         for (Livre livre: livres){
             String sPrice = String.valueOf(livre.price);
             String sQuantity = String.valueOf(livre.quantity);
-            if (livre.isbn.contains(smartResearch)){
+            if (livre.isbn.toLowerCase().contains(smartResearch)){
                 lstResearch.add(livre);
-            } else if (livre.description.contains(smartResearch)) {
+            } else if (livre.description.toLowerCase().contains(smartResearch)) {
                 lstResearch.add(livre);
-            } else if (livre.author.contains(smartResearch)) {
+            } else if (livre.author.toLowerCase().contains(smartResearch)) {
                 lstResearch.add(livre);
-            } else if (livre.title.contains(smartResearch)) {
+            } else if (livre.title.toLowerCase().contains(smartResearch)) {
                 lstResearch.add(livre);
             } else if (sPrice.contains(smartResearch)) {
                 lstResearch.add(livre);
